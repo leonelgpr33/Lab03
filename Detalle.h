@@ -10,4 +10,12 @@
 
 @interface Detalle : UIViewController
 
+//Outlets
+@property (strong, nonatomic) IBOutlet UITableView *tblDatos;
+
+//Actiones
+- (IBAction)btnRegresar:(id)sender;
+- (IBAction)btnVermas:(id)sender;
+- (IBAction)btnCompartir:(id)sender;
+
 @end

@@ -34,4 +34,14 @@
 }
 */
 
+- (IBAction)btnRegresar:(id)sender {
+    [self performSegueWithIdentifier:@"DetalleToHome" sender:self];
+}
+
+- (IBAction)btnVermas:(id)sender {
+    [self performSegueWithIdentifier:@"DetalleToVermas" sender:self];
+}
+
+- (IBAction)btnCompartir:(id)sender {
+}
 @end

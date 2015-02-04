@@ -34,4 +34,7 @@
 }
 */
 
+- (IBAction)btnRegresar:(id)sender {
+    [self performSegueWithIdentifier:@"VermasToDetalle" sender:self];
+}
 @end

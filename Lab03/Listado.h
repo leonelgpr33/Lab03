@@ -10,4 +10,12 @@
 
 @interface Listado : UIViewController
 
+//Outlets
+@property (strong, nonatomic) IBOutlet UITableView *tblDatos;
+
+//Actions
+- (IBAction)btnRegresar:(id)sender;
+- (IBAction)btnEditar:(id)sender;
+- (IBAction)btnEliminar:(id)sender;
+
 @end

@@ -10,6 +10,12 @@
 
 @interface Home : UIViewController
 
+//Action
+- (IBAction)btnNuevo:(id)sender;
+- (IBAction)btnEditar:(id)sender;
+- (IBAction)btnBorrar:(id)sender;
+- (IBAction)btnListado:(id)sender;
+
 
 @end
 

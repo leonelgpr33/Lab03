@@ -24,4 +24,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnNuevo:(id)sender {
+    [self performSegueWithIdentifier:@"HomeToNuevo" sender:self];
+}
+
+- (IBAction)btnEditar:(id)sender {
+    [self performSegueWithIdentifier:@"HomeToListado" sender:self];
+}
+
+- (IBAction)btnBorrar:(id)sender {
+    [self performSegueWithIdentifier:@"HomeToListado" sender:self];
+}
+
+- (IBAction)btnListado:(id)sender {
+    [self performSegueWithIdentifier:@"HomeToDetalle" sender:self];
+}
 @end

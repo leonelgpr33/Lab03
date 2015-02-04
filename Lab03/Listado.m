@@ -34,4 +34,14 @@
 }
 */
 
+- (IBAction)btnRegresar:(id)sender {
+    [self performSegueWithIdentifier:@"ListadoToHome" sender:self];
+}
+
+- (IBAction)btnEditar:(id)sender {
+    [self performSegueWithIdentifier:@"ListadoToNuevo" sender:self];
+}
+
+- (IBAction)btnEliminar:(id)sender {
+}
 @end
