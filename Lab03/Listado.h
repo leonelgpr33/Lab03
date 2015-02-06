@@ -11,6 +11,7 @@
 @interface Listado : UIViewController
 
 //Outlets
+
 @property (strong, nonatomic) IBOutlet UITableView *tblDatos;
 
 //Actions

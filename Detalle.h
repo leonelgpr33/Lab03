@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DBManager.h"
+#import <Accounts/Accounts.h>
+#import <Social/Social.h>
+#import <Twitter/Twitter.h>
 
-@interface Detalle : UIViewController
+@interface Detalle : UIViewController<UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 
 //Outlets
 @property (strong, nonatomic) IBOutlet UITableView *tblDatos;
+@property (strong, nonatomic) IBOutlet UILabel *lblTitulo;
 
 //Actiones
 - (IBAction)btnRegresar:(id)sender;

@@ -19,6 +19,14 @@
 		B9AA0D4B1A81FE6600979455 /* Detalle.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AA0D4A1A81FE6600979455 /* Detalle.m */; };
 		B9AA0D4E1A8202A500979455 /* Vermas.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AA0D4D1A8202A500979455 /* Vermas.m */; };
 		B9AA0D541A8218E800979455 /* icono_camara.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9AA0D531A8218E800979455 /* icono_camara.jpeg */; };
+		B9E0E5301A833255003A8D27 /* notebook_w.png in Resources */ = {isa = PBXBuildFile; fileRef = B9E0E52F1A833255003A8D27 /* notebook_w.png */; };
+		B9E0E5321A83336C003A8D27 /* photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9E0E5311A83336C003A8D27 /* photo.jpg */; };
+		B9E0E5351A8335F9003A8D27 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E0E5341A8335F9003A8D27 /* DBManager.m */; };
+		B9E0E5371A833642003A8D27 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E0E5361A833642003A8D27 /* libsqlite3.0.dylib */; };
+		B9E0E53A1A8341D4003A8D27 /* AgendaList.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E0E5391A8341D4003A8D27 /* AgendaList.m */; };
+		B9E0E53C1A834DC8003A8D27 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E0E53B1A834DC8003A8D27 /* Accounts.framework */; };
+		B9E0E53E1A834DF4003A8D27 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E0E53D1A834DF4003A8D27 /* Social.framework */; };
+		B9E0E5401A834DFB003A8D27 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E0E53F1A834DFB003A8D27 /* Twitter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +62,16 @@
 		B9AA0D4C1A8202A500979455 /* Vermas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vermas.h; sourceTree = "<group>"; };
 		B9AA0D4D1A8202A500979455 /* Vermas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vermas.m; sourceTree = "<group>"; };
 		B9AA0D531A8218E800979455 /* icono_camara.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icono_camara.jpeg; path = imagenes/icono_camara.jpeg; sourceTree = SOURCE_ROOT; };
+		B9E0E52F1A833255003A8D27 /* notebook_w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = notebook_w.png; path = imagenes/notebook_w.png; sourceTree = SOURCE_ROOT; };
+		B9E0E5311A83336C003A8D27 /* photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo.jpg; path = imagenes/photo.jpg; sourceTree = SOURCE_ROOT; };
+		B9E0E5331A8335F9003A8D27 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		B9E0E5341A8335F9003A8D27 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		B9E0E5361A833642003A8D27 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		B9E0E5381A8341D4003A8D27 /* AgendaList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgendaList.h; sourceTree = "<group>"; };
+		B9E0E5391A8341D4003A8D27 /* AgendaList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgendaList.m; sourceTree = "<group>"; };
+		B9E0E53B1A834DC8003A8D27 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		B9E0E53D1A834DF4003A8D27 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		B9E0E53F1A834DFB003A8D27 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +79,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9E0E5401A834DFB003A8D27 /* Twitter.framework in Frameworks */,
+				B9E0E53E1A834DF4003A8D27 /* Social.framework in Frameworks */,
+				B9E0E53C1A834DC8003A8D27 /* Accounts.framework in Frameworks */,
+				B9E0E5371A833642003A8D27 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +99,10 @@
 		B9AA0D101A81E91100979455 = {
 			isa = PBXGroup;
 			children = (
+				B9E0E53F1A834DFB003A8D27 /* Twitter.framework */,
+				B9E0E53D1A834DF4003A8D27 /* Social.framework */,
+				B9E0E53B1A834DC8003A8D27 /* Accounts.framework */,
+				B9E0E5361A833642003A8D27 /* libsqlite3.0.dylib */,
 				B9AA0D1B1A81E91100979455 /* Lab03 */,
 				B9AA0D351A81E91100979455 /* Lab03Tests */,
 				B9AA0D1A1A81E91100979455 /* Products */,
@@ -112,6 +138,10 @@
 				B9AA0D4A1A81FE6600979455 /* Detalle.m */,
 				B9AA0D4C1A8202A500979455 /* Vermas.h */,
 				B9AA0D4D1A8202A500979455 /* Vermas.m */,
+				B9E0E5331A8335F9003A8D27 /* DBManager.h */,
+				B9E0E5341A8335F9003A8D27 /* DBManager.m */,
+				B9E0E5381A8341D4003A8D27 /* AgendaList.h */,
+				B9E0E5391A8341D4003A8D27 /* AgendaList.m */,
 			);
 			path = Lab03;
 			sourceTree = "<group>";
@@ -145,6 +175,8 @@
 		B9AA0D4F1A82183A00979455 /* Imagenes */ = {
 			isa = PBXGroup;
 			children = (
+				B9E0E5311A83336C003A8D27 /* photo.jpg */,
+				B9E0E52F1A833255003A8D27 /* notebook_w.png */,
 				B9AA0D531A8218E800979455 /* icono_camara.jpeg */,
 			);
 			name = Imagenes;
@@ -199,6 +231,7 @@
 				TargetAttributes = {
 					B9AA0D181A81E91100979455 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = QXF33N93KH;
 					};
 					B9AA0D311A81E91100979455 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -232,8 +265,10 @@
 			files = (
 				B9AA0D281A81E91100979455 /* Main.storyboard in Resources */,
 				B9AA0D541A8218E800979455 /* icono_camara.jpeg in Resources */,
+				B9E0E5321A83336C003A8D27 /* photo.jpg in Resources */,
 				B9AA0D2D1A81E91100979455 /* LaunchScreen.xib in Resources */,
 				B9AA0D2A1A81E91100979455 /* Images.xcassets in Resources */,
+				B9E0E5301A833255003A8D27 /* notebook_w.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,10 +289,12 @@
 				B9AA0D251A81E91100979455 /* Home.m in Sources */,
 				B9AA0D221A81E91100979455 /* AppDelegate.m in Sources */,
 				B9AA0D1F1A81E91100979455 /* main.m in Sources */,
+				B9E0E53A1A8341D4003A8D27 /* AgendaList.m in Sources */,
 				B9AA0D471A81FC3100979455 /* Listado.m in Sources */,
 				B9AA0D441A81F8AE00979455 /* Nuevo.m in Sources */,
 				B9AA0D4E1A8202A500979455 /* Vermas.m in Sources */,
 				B9AA0D4B1A81FE6600979455 /* Detalle.m in Sources */,
+				B9E0E5351A8335F9003A8D27 /* DBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +419,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Lab03/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -393,6 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Lab03/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -452,6 +491,7 @@
 				B9AA0D3E1A81E91100979455 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B9AA0D3F1A81E91100979455 /* Build configuration list for PBXNativeTarget "Lab03Tests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +500,7 @@
 				B9AA0D411A81E91100979455 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

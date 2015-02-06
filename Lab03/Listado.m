@@ -8,6 +8,8 @@
 
 #import "Listado.h"
 
+
+
 @interface Listado ()
 
 @end
@@ -23,6 +25,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 /*
 #pragma mark - Navigation
@@ -41,6 +45,9 @@
 - (IBAction)btnEditar:(id)sender {
     [self performSegueWithIdentifier:@"ListadoToNuevo" sender:self];
 }
+
+
+
 
 - (IBAction)btnEliminar:(id)sender {
 }
