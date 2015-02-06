@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *txtEstado;
 @property (strong, nonatomic) IBOutlet UITextField *txtYoutube;
 @property (strong, nonatomic) IBOutlet UIImageView *imgPhoto;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 
 //Actions
 - (IBAction)btnGuardar:(id)sender;

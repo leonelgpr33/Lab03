@@ -9,6 +9,8 @@
 #import "Nuevo.h"
 
 UIAlertView *alert;
+NSMutableArray *datos;
+
 
 @interface Nuevo ()
 
@@ -18,16 +20,42 @@ UIAlertView *alert;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(ocultaTeclado:)];
-    [tapGesture setNumberOfTouchesRequired:1];
-    [[self view] addGestureRecognizer:tapGesture];
+    [self initControler];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)initControler{
+    if (idTemp!=0) {
+        datos = [[DBManager getSharedInstance]executeQueryWithString:[[NSString alloc] initWithFormat: @"select agendaid, nombre, estado, youtube, foto from agenda where agendaid=%@",idTemp]];
+        self.txtNombre.text=datos[0][1];
+        self.txtEstado.text=datos[0][2];
+        self.txtYoutube.text=datos[0][3];
+        self.imgPhoto.image=[[UIImage alloc] initWithData:datos[0][4]];
+    }
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillBeHidden:) name:UIKeyboardWillHideNotification object:nil];
+ 
+}
+
+
+
+- (void)keyboardWasShown:(NSNotification*)aNotification
+{
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    [self.scrollView setContentOffset:CGPointMake(0, kbSize.height) animated:YES];
+}
+
+// Called when the UIKeyboardWillHideNotification is sent
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+    [self.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+}
+
 
 -(void)ocultaTeclado:(UITapGestureRecognizer *)sender{
     //Aquí hay que declarar todos los UITextField de nuestra escena
@@ -60,9 +88,16 @@ UIAlertView *alert;
         [alert show];
     }
     else{
-        if([[DBManager getSharedInstance]insertaDB:nombre estado:estado youtube:youtube foto:imageData]){
-            [self performSegueWithIdentifier:@"NuevoToHome" sender:self];
+        if (idTemp==0) {
+            if([[DBManager getSharedInstance]insertaDB:nombre estado:estado youtube:youtube foto:imageData]){
+                [self performSegueWithIdentifier:@"NuevoToHome" sender:self];
+            }
+        }else
+        {
+            [[DBManager getSharedInstance] actualizaDB:self.txtNombre.text estado:self.txtEstado.text youtube:self.txtYoutube.text foto:UIImagePNGRepresentation([self.imgPhoto image]) idagenda:idTemp];
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
+        
     }
 }
 

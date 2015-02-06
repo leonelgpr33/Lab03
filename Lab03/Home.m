@@ -7,6 +7,7 @@
 //
 
 #import "Home.h"
+#import "DBManager.h"
 
 @interface Home ()
 
@@ -28,6 +29,7 @@
 }
 
 - (IBAction)btnNuevo:(id)sender {
+    idTemp=0;
     [self performSegueWithIdentifier:@"HomeToNuevo" sender:self];
 }
 

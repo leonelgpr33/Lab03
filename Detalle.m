@@ -8,6 +8,7 @@
 
 #import "Detalle.h"
 #import "AgendaList.h"
+#import "DBManager.h"
 
 NSMutableArray *datos;
 NSString *idTemp = nil;
@@ -32,6 +33,8 @@ int indice = 0;
 
 - (void)initControler{
      datos = [[DBManager getSharedInstance]listDB:@"select agendaid, nombre, estado, youtube, foto from agenda"];
+    self.vermas.enabled=false;
+    self.compartir.enabled=false;
 }
 /*
 #pragma mark - Navigation
@@ -111,6 +114,8 @@ int indice = 0;
     indice = indexPath.row;
     idTemp = [dato objectAtIndex:0];
     self.lblTitulo.text = [dato objectAtIndex:1];
+    self.vermas.enabled=true;
+    self.compartir.enabled=true;
 }
 
 @end

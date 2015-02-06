@@ -13,6 +13,8 @@
 //Outlets
 
 @property (strong, nonatomic) IBOutlet UITableView *tblDatos;
+@property (strong, nonatomic) IBOutlet UIButton *eliminar;
+@property (strong, nonatomic) IBOutlet UIButton *editar;
 
 //Actions
 - (IBAction)btnRegresar:(id)sender;

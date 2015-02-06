@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
@@ -30,7 +29,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STS-Ss-f6T">
-                                <rect key="frame" x="105" y="344" width="100" height="30"/>
+                                <rect key="frame" x="105" y="368" width="100" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -39,18 +38,6 @@
                                 </state>
                                 <connections>
                                     <action selector="btnEditar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2c3-2K-Quw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krd-Wd-OBW">
-                                <rect key="frame" x="105" y="394" width="100" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Borrar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnBorrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zll-Nh-lYg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlL-5L-fTX">
@@ -100,32 +87,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eoI-bn-6IC">
-                                <rect key="frame" x="70" y="134" width="180" height="130"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqG-Vb-dIK">
-                                <rect key="frame" x="38" y="54" width="100" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Regresar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnRegresar:" destination="Ncn-dq-sAl" eventType="touchUpInside" id="MWb-Bu-AcA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRd-Kc-amY" userLabel="btnPhoto">
-                                <rect key="frame" x="70" y="134" width="180" height="130"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnPhoto:" destination="Ncn-dq-sAl" eventType="touchUpInside" id="b0K-Xx-P1d"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hym-1w-z36">
+                                <rect key="frame" x="0.0" y="90" width="320" height="488"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eoI-bn-6IC">
+                                        <rect key="frame" x="70" y="19" width="180" height="130"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRd-Kc-amY" userLabel="btnPhoto">
+                                        <rect key="frame" x="70" y="23" width="180" height="130"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnPhoto:" destination="Ncn-dq-sAl" eventType="touchUpInside" id="b0K-Xx-P1d"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Link de Youtube" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WRA-5g-3yy">
+                                        <rect key="frame" x="16" y="344" width="288" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fbT-eN-zQh">
+                                        <rect key="frame" x="16" y="241" width="288" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Estado de Ánimo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AOe-dW-H36">
+                                        <rect key="frame" x="16" y="292" width="288" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haH-vd-ScP">
-                                <rect key="frame" x="190" y="54" width="100" height="28"/>
+                                <rect key="frame" x="204" y="43" width="100" height="28"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -136,27 +131,25 @@
                                     <action selector="btnGuardar:" destination="Ncn-dq-sAl" eventType="touchUpInside" id="mSq-KJ-UcW"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Estado de Ánimo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AOe-dW-H36">
-                                <rect key="frame" x="16" y="364" width="288" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Link de Youtube" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WRA-5g-3yy">
-                                <rect key="frame" x="16" y="419" width="288" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fbT-eN-zQh">
-                                <rect key="frame" x="16" y="306" width="288" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqG-Vb-dIK">
+                                <rect key="frame" x="16" y="41" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Regresar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnRegresar:" destination="Ncn-dq-sAl" eventType="touchUpInside" id="MWb-Bu-AcA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="imgPhoto" destination="eoI-bn-6IC" id="Opx-Oj-bH7"/>
+                        <outlet property="scrollView" destination="Hym-1w-z36" id="nhd-DL-gxs"/>
                         <outlet property="txtEstado" destination="AOe-dW-H36" id="ZhQ-gn-JJ8"/>
                         <outlet property="txtNombre" destination="fbT-eN-zQh" id="Ggg-nd-Rhh"/>
                         <outlet property="txtYoutube" destination="WRA-5g-3yy" id="H9l-wm-BJ6"/>
@@ -219,7 +212,7 @@
                                 <rect key="frame" x="0.0" y="128" width="320" height="440"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCel" rowHeight="70" id="hEs-xf-zjr">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCel" rowHeight="70" id="hEs-xf-zjr" customClass="AgendaList">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hEs-xf-zjr" id="irv-IM-57e">
@@ -227,29 +220,40 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAz-Gd-Mx2">
                                                     <rect key="frame" x="41" y="8" width="100" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Estado" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gch-Xt-riY">
                                                     <rect key="frame" x="41" y="37" width="100" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aL2-gT-a1h">
-                                                    <rect key="frame" x="179" y="0.0" width="100" height="70"/>
+                                                    <rect key="frame" x="179" y="8" width="100" height="50"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgFoto" destination="aL2-gT-a1h" id="tHY-zc-c94"/>
+                                            <outlet property="lblEstado" destination="gch-Xt-riY" id="kmE-WD-lbG"/>
+                                            <outlet property="lblNombre" destination="IAz-Gd-Mx2" id="Ivm-7X-BCO"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="rNp-Ed-eWF" id="ZMQ-ms-1fW"/>
+                                    <outlet property="delegate" destination="rNp-Ed-eWF" id="3IO-CT-f8f"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="editar" destination="GWI-8u-VeN" id="VtN-Mh-hQh"/>
+                        <outlet property="eliminar" destination="OKP-yh-0u0" id="blH-qV-p6A"/>
                         <outlet property="tblDatos" destination="6xZ-aq-EtL" id="St3-Nz-5Pk"/>
                         <segue destination="BYZ-38-t0r" kind="modal" identifier="ListadoToHome" id="cMd-m6-0jG"/>
                         <segue destination="Ncn-dq-sAl" kind="modal" identifier="ListadoToNuevo" id="y9x-eV-6Eb"/>
@@ -358,8 +362,10 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="compartir" destination="qGm-Wg-EJC" id="XxI-s2-vba"/>
                         <outlet property="lblTitulo" destination="Kp1-D8-vqA" id="4hq-uB-mY2"/>
                         <outlet property="tblDatos" destination="BNy-Tj-bda" id="Fd1-pp-GOp"/>
+                        <outlet property="vermas" destination="Gbd-89-1IJ" id="f2v-Mq-aGq"/>
                         <segue destination="BYZ-38-t0r" kind="modal" identifier="DetalleToHome" id="SPg-cp-0KL"/>
                         <segue destination="bq1-ne-2Jv" kind="modal" identifier="DetalleToVermas" id="weJ-Dx-Zrf"/>
                     </connections>
@@ -435,6 +441,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="y9x-eV-6Eb"/>
         <segue reference="cMd-m6-0jG"/>
-        <segue reference="N0G-oa-E7s"/>
+        <segue reference="i3h-Yt-5ep"/>
     </inferredMetricsTieBreakers>
 </document>
